@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchStocks } from '../Redux/stocks/stockreducer';
+import { fetchStats, fetchStocks } from '../Redux/stocks/stockreducer';
 
 
 
@@ -8,12 +8,18 @@ export const Home = () => {
 
 const dispatch = useDispatch();
 useEffect(() => dispatch(fetchStocks),[dispatch]);
-let result = useSelector((state) => state.stocks);
- console.log(result);
+useEffect(() => dispatch(fetchStats), [dispatch])
+
+let data = useSelector((state) => state.stocks);
+ console.log(data);
+ 
   return (
    
     <div>
-     { result.map((item) => (<h2 key={item.uuid}>{item.price}</h2>))}
+     {/* { coins.map((item) => (<div key={item.uuid}>
+       <ul><img alt='img' src={item.iconUrl} height='50px' width='50px'></img></ul>
+       
+     </div>))} */}
     </div>
   );
 }
