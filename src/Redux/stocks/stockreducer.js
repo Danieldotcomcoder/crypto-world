@@ -48,7 +48,7 @@ export const fetchStocks = (dispatch) => {
         tiers: '1',
         orderBy: 'marketCap',
         orderDirection: 'desc',
-        limit: '100',
+        limit: '50',
         offset: '0',
       },
       headers: {
