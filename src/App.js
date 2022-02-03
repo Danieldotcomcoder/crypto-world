@@ -8,13 +8,17 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <nav>
+        <nav  className='navbar'>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Crypto</NavLink>
             </li>
-            <li></li>
-            <li></li>
+            <li> 
+              <NavLink to='Stats'>Stats</NavLink>
+              </li>
+            <li>
+               <NavLink to='About'>About</NavLink>
+            </li>
           </ul>
 
         </nav>

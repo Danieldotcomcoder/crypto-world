@@ -1,25 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchStats, fetchStocks } from '../Redux/stocks/stockreducer';
+import { fetchStocks } from '../Redux/stocks/stockreducer';
 
 
 
 export const Home = () => {
 
 const dispatch = useDispatch();
-useEffect(() => dispatch(fetchStocks),[dispatch]);
-useEffect(() => dispatch(fetchStats), [dispatch])
 
-let data = useSelector((state) => state.stocks);
- console.log(data);
+const data  = useSelector((state) => state.stocks);
+useEffect(() => dispatch(fetchStocks),[dispatch]);
  
   return (
    
-    <div>
-     {/* { coins.map((item) => (<div key={item.uuid}>
-       <ul><img alt='img' src={item.iconUrl} height='50px' width='50px'></img></ul>
-       
-     </div>))} */}
+    <div className='main-div'>
+      
+      <div className='card-div'>
+    { data.map((item) => (<ul key={item.uuid}>
+      <li>
+        <img alt='img' src={item.iconUrl} height='50px' width='50px' />
+        <p>{item.symbol}</p>
+        <p>{item.name}</p>
+        <p>{item.price} $</p>
+        <p>{item.change} %</p>
+      </li>
+    </ul>))}
+   
+    </div>
     </div>
   );
 }

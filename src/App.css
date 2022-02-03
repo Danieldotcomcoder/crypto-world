@@ -1,3 +1,18 @@
-.App {
-  text-align: center;
+.body {
+  margin: 0;
+  padding: 0;
+
 }
+.navbar {
+  width: 25%;
+  margin-left: 70%;
+
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+}
+

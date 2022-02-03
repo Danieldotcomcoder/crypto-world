@@ -69,8 +69,8 @@ const Stocksreducer = (state = initialState, action) => {
     switch (action.type) {
       case LOAD_STOCKS:
         return action.payload
-      case LOAD_STATS:
-        return [...state ,action.payload]
+      // case LOAD_STATS:
+      //   return action.payload
       default:
         return state;
     }
