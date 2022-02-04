@@ -26,17 +26,17 @@ ul li {
 }
 
 .card {
-  border: 2px solid lightsalmon;
-  margin-left: 0%;
-  box-shadow: 15px 25px 15px aquamarine;
-  border-radius: 15% ;
+  border: 3px solid transparent;
+  box-shadow: 15px 25px 15px #48b6c5;
+  border-radius: 10% ;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: linear-gradient(to right,#144766,#1d6f84);
 }
 
 .card:hover {
-  box-shadow: 15px 25px 35px aquamarine;
+  box-shadow: 15px 25px 35px #48b6c5;
 
 
 }
@@ -46,6 +46,8 @@ ul li {
   margin-left: 75%;
   margin-top: 5%;
   cursor: pointer;
+  border-radius: 100%;
+  box-shadow: 5px 5px 5px lightseagreen;
 }
 
 .card-div {
@@ -65,24 +67,30 @@ ul li {
 .coin-name {
   font-size: 3.2vh;
   font-weight: bolder;
-  color: tomato;
+  color: white
 }
 
 .coin-symbol {
   font-style: italic;
+  color: white;
 }
 
 .coin-info {
   position: relative;
   width: 68%;
   margin-left: 5%;
-  margin-bottom:5%;
+  bottom: 30%;
+  color: white;
 }
 
 .coin-price {
+  position: relative;
   font-weight: 500;
+  top: 5%;
 }
 
 .coin-price-change {
+  position: relative;
   font-weight: 500;
+  top: 5%;
 }
