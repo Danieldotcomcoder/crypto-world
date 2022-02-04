@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router, Route, Routes, NavLink,
 } from 'react-router-dom';
 import { Home } from './components/home';
+import { Stats } from './components/stats';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </nav>
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="Stats" element={<Stats />} />
           </Routes>
 </Router>
     <Home/>
