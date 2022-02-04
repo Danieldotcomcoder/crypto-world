@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import { Home } from './components/home';
 import { Stats } from './components/stats';
+import { About } from './components/about';
 
 function App() {
   return (
@@ -15,20 +16,20 @@ function App() {
               <NavLink to="/">Crypto</NavLink>
             </li>
             <li> 
-              <NavLink to='Stats'>Stats</NavLink>
+              <NavLink to='/stats'>Stats</NavLink>
               </li>
             <li>
-               <NavLink to='About'>About</NavLink>
+               <NavLink to='/about'>About</NavLink>
             </li>
           </ul>
 
         </nav>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="Stats" element={<Stats />} />
+            <Route path="/stats" element={<Stats />} />
+            <Route path="/about" element={<About />} />
           </Routes>
 </Router>
-    <Home/>
     </div>
   );
 }

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { fetchStocks } from '../Redux/stocks/stockreducer';
 import '../App.css';
 
@@ -9,12 +10,13 @@ export const Home = () => {
 const dispatch = useDispatch();
 
 const data  = useSelector((state) => state.stocks);
-useEffect(() => dispatch(fetchStocks),[dispatch]);
+useEffect(() => dispatch(fetchStocks),[]);
  console.log(data)
   return (
    
     <div className='main-div'>
-      
+              
+
       <div >
       <ul className='card-div' >
     { data.map((item) => (
@@ -23,8 +25,13 @@ useEffect(() => dispatch(fetchStocks),[dispatch]);
         <div className='coin-info'>
         <p className='coin-name'>{item.name}</p>
         <p className='coin-symbol'>{item.symbol}</p>
-        <p className='coin-price'>Price: { Number(item.price).toFixed(5)} $</p>
-        <p className='coin-price-change'>Price Change: {Number(item.change)} %</p>
+        <p className='coin-price'>{ Number(item.price).toFixed(5)} $</p>
+        <p className='coin-price-change' style={{color: item.change>=0 ? '#0aec0a' : 'red'}}>{Number(item.change)} %</p>
+        <div className='coin-sparkline'>
+        <Sparklines  data={item.sparkline} limit={25} width={250} height={60}  >
+        <SparklinesLine color='violet'/>
+        </Sparklines>
+        </div>    
         </div>
       </li>
     ))}</ul>

@@ -6,13 +6,17 @@ import { fetchStats } from '../Redux/stocks/stockreducer';
 export const Stats = () => {
 
     const dispatch = useDispatch()
-    const stats  = useSelector((state) => state);
-    useEffect(() => dispatch(fetchStats),[dispatch]);
+    const stats  = useSelector((state) => state.stocks);
+    useEffect(() => dispatch(fetchStats),[]);
      console.log(stats);
 
     return (
-        <div>
-
+        <div className='main'>
+         <h1>Stats Page</h1>
+         
+         { stats.map((item) => (
+             <p> {item.total}</p>
+         ))}
         </div>
     )
 }

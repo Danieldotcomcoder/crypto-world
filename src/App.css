@@ -87,10 +87,19 @@ ul li {
   position: relative;
   font-weight: 500;
   top: 5%;
+  color: rgb(1, 5, 17);
 }
 
 .coin-price-change {
   position: relative;
   font-weight: 500;
   top: 5%;
+}
+
+.coin-sparkline {
+  display: block;
+  position: relative;
+  top: 8%;
+  left: 15%;
+  background-color: transparent ;
 }
