@@ -3,8 +3,8 @@ import {
   BrowserRouter as Router, Route, Routes, NavLink,
 } from 'react-router-dom';
 import { Home } from './components/home';
-import { Stats } from './components/stats';
 import { About } from './components/about';
+import { Details } from './components/fetchAPI';
 
 function App() {
   return (
@@ -15,9 +15,6 @@ function App() {
             <li>
               <NavLink to="/">Crypto</NavLink>
             </li>
-            <li> 
-              <NavLink to='/stats'>Stats</NavLink>
-              </li>
             <li>
                <NavLink to='/about'>About</NavLink>
             </li>
@@ -26,8 +23,8 @@ function App() {
         </nav>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/stats" element={<Stats />} />
             <Route path="/about" element={<About />} />
+            <Route path="/details" element={<Details />} />
           </Routes>
 </Router>
     </div>
