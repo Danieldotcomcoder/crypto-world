@@ -13,10 +13,10 @@ function App() {
         <nav  className='navbar'>
           <ul>
             <li>
-              <NavLink to="/">Crypto</NavLink>
+              <NavLink style={{textDecoration: 'none'}} to="/">Crypto</NavLink>
             </li>
             <li>
-               <NavLink to='/about'>About</NavLink>
+               <NavLink to='/about' style={{textDecoration: 'none'}}>About</NavLink>
             </li>
           </ul>
 

@@ -18,9 +18,9 @@ ul li {
 .navbar ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
+
 
 .main-div {
   width: 100%;
@@ -100,7 +100,72 @@ ul li {
 .coin-sparkline {
   display: block;
   position: relative;
-  top: 8%;
+  top: 1%;
   left: 15%;
   background-color: transparent ;
+}
+
+.Desc-div {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  border: 1px solid transparent;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 2.5vh;
+  border-radius: 1%;
+  box-shadow: 20px 20px 30px 10px lightblue;
+  margin-left: 5%;  
+  position: relative;
+  bottom: 50px;
+}
+
+.Coin-d-name {
+  display: flex;
+  font-family: 'Poppins';
+  font-size: 8vh;
+  position: relative;
+  font-weight: 500;
+  bottom: 50px;
+  justify-content: center;
+  width: 40%;
+  left: 30%;
+}
+
+.table-row {
+  font-weight: 500;
+  color: black;
+  font-size: 2vh;
+}
+
+.sparkline-details {
+  width: 90%;
+  border: 1px solid transparent;
+  height: 200px;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+
+.spk {
+  border: 1px solid black;
+}
+
+.back {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  left: 5%;
+  font-size: 2.8vh;
+  color: black;
+  background-color: aquamarine;
+  border-radius: 10%;
+}
+
+.logo {
+  position: relative;
+  left: 10%;
+  border: 1px solid black;
 }
