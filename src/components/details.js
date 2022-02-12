@@ -35,7 +35,7 @@ var parse = require('html-react-parser');
       Axios.request(options).then((response) =>
        response.data).then((result) => setData(Object.entries(result.data.coin)))
     
-      },[])
+      },[])// eslint-disable-line react-hooks/exhaustive-deps
       if (!data) return null;
       data.splice(7,2)
       

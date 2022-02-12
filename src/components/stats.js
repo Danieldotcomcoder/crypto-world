@@ -27,7 +27,7 @@ export const Stats = () =>  {
         Axios.request(statistics).then((response) =>
          response.data).then((result) => setStats(Object.entries(result.data)))
       
-        },[])
+        },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
         if (!stats) return null;
         console.log(stats);
