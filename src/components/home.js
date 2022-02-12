@@ -3,7 +3,6 @@ import { Link  } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { fetchStocks } from '../Redux/stocks/stockreducer';
-import mainLogo from'../images/cw.png';
 import '../App.css';
 
 
@@ -19,7 +18,6 @@ useEffect(() => dispatch(fetchStocks),[]);
   return (
    
     <div className='main-div'>
-    <img alt='logo-img' className='logo' src={mainLogo} width={200} height={100}/>
       <ul className='card-div' >
     { data.map((item) => (
       <li key={item.uuid} className='card'>

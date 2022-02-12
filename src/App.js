@@ -6,13 +6,16 @@ import { Home } from './components/home';
 import { About } from './components/about';
 import { Details } from './components/details';
 import { Stats } from './components/stats';
+import mainLogo from'../src/images/cw.png';
+
 
 function App() {
   return (
     <div className="App">
       <Router>
         <nav  className='navbar'>
-          <ul>
+        <img className='logo' alt='logo-img' src={mainLogo} width={140} height={65}/>
+          <ul className='nav-list'>
             <li>
               <NavLink className='linknav' style={{textDecoration: 'none'}} to="/">Crypto</NavLink>
             </li>
