@@ -4,7 +4,8 @@ import {
 } from 'react-router-dom';
 import { Home } from './components/home';
 import { About } from './components/about';
-import { Details } from './components/fetchAPI';
+import { Details } from './components/details';
+import { Stats } from './components/stats';
 
 function App() {
   return (
@@ -13,10 +14,13 @@ function App() {
         <nav  className='navbar'>
           <ul>
             <li>
-              <NavLink style={{textDecoration: 'none'}} to="/">Crypto</NavLink>
+              <NavLink className='linknav' style={{textDecoration: 'none'}} to="/">Crypto</NavLink>
             </li>
             <li>
-               <NavLink to='/about' style={{textDecoration: 'none'}}>About</NavLink>
+              <NavLink className='linknav' style={{textDecoration: 'none'}} to="/stats">Stats</NavLink>
+            </li>
+            <li>
+               <NavLink className='linknav' to='/about' style={{textDecoration: 'none'}}>About</NavLink>
             </li>
           </ul>
 
@@ -24,6 +28,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/stats" element={<Stats />} />
             <Route path="/details" element={<Details />} />
           </Routes>
 </Router>

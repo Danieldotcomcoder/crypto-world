@@ -4,15 +4,24 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 .navbar {
-  width: 25%;
-  margin-left: 70%;
+  width: 30%;
+  margin-left: 60%;
+  height: 50px;
+  
 }
 
 ul li {
   list-style: none;
+}
+
+.linknav {
+  font-family: 'Poppins';
+  color: #06334e;
+  font-size: 3.2vh;
 }
 
 .navbar ul {
@@ -120,7 +129,7 @@ ul li {
   box-shadow: 20px 20px 30px 10px lightblue;
   margin-left: 5%;  
   position: relative;
-  bottom: 50px;
+  bottom: 55px;
 }
 
 .Coin-d-name {
@@ -141,12 +150,16 @@ ul li {
   font-size: 2vh;
 }
 
+.table-div {
+  position: relative;
+  bottom: 15px;
+}
+
 .sparkline-details {
   width: 90%;
   border: 1px solid transparent;
   height: 200px;
   margin-left: 8%;
-  margin-top: 2%;
 }
 
 .spk {
@@ -165,7 +178,17 @@ ul li {
 }
 
 .logo {
-  position: relative;
+  position: absolute;
   left: 10%;
-  border: 1px solid black;
+  top: 0%;
+  border: 1px solid transparent;
+}
+
+.stats-table {
+  border: 1px dotted lightslategray;
+  border-radius: 1%;
+  width: 95%;
+  margin-left: 2%;
+  margin-top: 5%;
+  box-shadow: 10px 10px 20px  lightseagreen;
 }

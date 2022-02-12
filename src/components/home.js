@@ -19,7 +19,7 @@ useEffect(() => dispatch(fetchStocks),[]);
   return (
    
     <div className='main-div'>
-    <img className='logo' src={mainLogo} width={170} height={80}></img>
+    <img alt='logo-img' className='logo' src={mainLogo} width={200} height={100}/>
       <ul className='card-div' >
     { data.map((item) => (
       <li key={item.uuid} className='card'>
