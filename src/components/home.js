@@ -11,7 +11,7 @@ export const Home = () => {
 const dispatch = useDispatch();
 
 const data  = useSelector((state) => state.stocks);
-useEffect(() => dispatch(fetchStocks),[]);
+useEffect(() => dispatch(fetchStocks));
 
 
  console.log(data)

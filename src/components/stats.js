@@ -25,9 +25,7 @@ export const Stats = () =>  {
        
        useEffect(() =>  { 
         Axios.request(statistics).then((response) =>
-         response.data).then((result) => setStats(Object.entries(result.data)))
-      
-        },[])
+         response.data).then((result) => setStats(Object.entries(result.data)))})
 
         if (!stats) return null;
         console.log(stats);
