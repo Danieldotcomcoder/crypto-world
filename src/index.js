@@ -9,11 +9,13 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MuiThemeProvider>    
+      
       <Provider store={store}>
+      <MuiThemeProvider>  
       <App />
-      </Provider>
       </MuiThemeProvider>
+      </Provider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
