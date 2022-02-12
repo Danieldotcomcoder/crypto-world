@@ -4,14 +4,13 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  
 }
 
 .navbar {
   display: flex;
   width: 100%;
   height: 70px;
-  border-bottom: 1px solid transparent;  
+  border-bottom: 1px solid transparent;
   position: relative;
   background-color: #5ce1e6;
   justify-content: center;
@@ -20,7 +19,6 @@
 
 ul li {
   list-style: none;
-  
 }
 
 .linknav {
@@ -29,11 +27,10 @@ ul li {
   font-size: 3.2vh;
 }
 
-
 .navbar ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .navbar ul li {
@@ -48,7 +45,6 @@ ul li {
   margin-right: 60%;
 }
 
-
 .main-div {
   width: 100%;
 }
@@ -56,17 +52,15 @@ ul li {
 .card {
   border: 3px solid transparent;
   box-shadow: 15px 25px 15px #48b6c5;
-  border-radius: 10% ;
+  border-radius: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: linear-gradient(to right,#144766,#1d6f84);
+  background-image: linear-gradient(to right, #144766, #1d6f84);
 }
 
 .card:hover {
   box-shadow: 15px 25px 35px #48b6c5;
-
-
 }
 
 .coin-logo {
@@ -80,7 +74,7 @@ ul li {
 
 .card-div {
   display: grid;
-  grid-template-columns: repeat(3,30%);
+  grid-template-columns: repeat(3, 30%);
   grid-auto-rows: 240px;
   margin-left: 4%;
   margin-top: 60px;
@@ -95,7 +89,7 @@ ul li {
 .coin-name {
   font-size: 3.2vh;
   font-weight: bolder;
-  color: white
+  color: white;
 }
 
 .coin-symbol {
@@ -129,7 +123,7 @@ ul li {
   position: relative;
   top: 1%;
   left: 15%;
-  background-color: transparent ;
+  background-color: transparent;
 }
 
 .Desc-div {
@@ -145,7 +139,7 @@ ul li {
   font-size: 2.5vh;
   border-radius: 1%;
   box-shadow: 20px 20px 30px 10px lightblue;
-  margin-left: 5%;  
+  margin-left: 5%;
   position: relative;
   bottom: 55px;
 }
@@ -153,13 +147,13 @@ ul li {
 .Coin-d-name {
   display: flex;
   font-family: 'Poppins';
-  font-size: 8vh;
+  font-size: 4vh;
   position: relative;
   font-weight: 500;
-  bottom: 50px;
+  bottom: 90px;
   justify-content: center;
   width: 40%;
-  left: 30%;
+  left: 28%;
 }
 
 .table-row {
@@ -188,13 +182,12 @@ ul li {
   text-decoration: none;
   cursor: pointer;
   position: relative;
-  left: 5%;
+  left: 0.5%;
   font-size: 2.8vh;
   color: black;
   background-color: aquamarine;
   border-radius: 10%;
 }
-
 
 .stats-table {
   border: 1px dotted lightslategray;
@@ -202,5 +195,35 @@ ul li {
   width: 95%;
   margin-left: 2%;
   margin-top: 5%;
-  box-shadow: 10px 10px 20px  lightseagreen;
+  box-shadow: 10px 10px 20px lightseagreen;
+}
+
+.about-main {
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+a,
+h3 {
+  text-decoration: wavy;
+  color: blueviolet;
+  font-size: 2.4vh;
+}
+
+.about-desc {
+  width: 70%;
+  font-size: 3vh;
+  border: 1px solid transparent;
+  box-shadow: 10px 10px 10px sandybrown;
+  background-color: beige;
+}
+
+.about-h {
+  margin-top: 10%;
 }
