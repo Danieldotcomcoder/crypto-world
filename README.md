@@ -3,7 +3,7 @@
 This is a React project based on the coinranking Api, which will display a list of Crypto Currencies that you can monitor their price and you can click on any coin to get more details on a new page.  
 # Screenshots
 ## Home Page
-![image](https://user-images.githubusercontent.com/87448628/153715609-7e38255a-2869-4525-a264-376926a80190.png)
+![image](https://user-images.githubusercontent.com/87448628/153716022-59b40204-6753-41ee-a272-78fbdc896149.png)
 
 ## Details Page
 ![image](https://user-images.githubusercontent.com/87448628/153715681-cdb2c6ba-33ec-47a4-9bae-994fa4008ecb.png)
