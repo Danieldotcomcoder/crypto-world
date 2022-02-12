@@ -17,7 +17,7 @@ function App() {
         <img className='logo' alt='logo-img' src={mainLogo} width={140} height={65}/>
           <ul className='nav-list'>
             <li>
-              <NavLink className='linknav' style={{textDecoration: 'none'}} to="/">Crypto</NavLink>
+              <NavLink className='linknav' style={{textDecoration: 'none'}} to="/">Home</NavLink>
             </li>
             <li>
               <NavLink className='linknav' style={{textDecoration: 'none'}} to="/stats">Stats</NavLink>
