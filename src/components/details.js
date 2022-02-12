@@ -63,7 +63,6 @@ var parse = require('html-react-parser');
         <TableHeaderColumn style={{color: 'black', fontSize: '2vh'}}>Price</TableHeaderColumn>
         <TableHeaderColumn style={{color: 'black', fontSize: '2vh'}}>Price Change</TableHeaderColumn>
         <TableHeaderColumn style={{color: 'black', fontSize: '2vh'}}>24h Volume</TableHeaderColumn>
-        <TableHeaderColumn style={{color: 'black', fontSize: '2vh'}}>Website URL</TableHeaderColumn>
       </TableRow>
     </TableHeader>
     <TableBody>
@@ -75,7 +74,6 @@ var parse = require('html-react-parser');
         <TableRowColumn>{Number(data[9][1]).toFixed(9)} $</TableRowColumn>
         <TableRowColumn >{data[12][1]} %</TableRowColumn>
         <TableRowColumn>{data[7][1]}</TableRowColumn>
-        <TableRowColumn>{data[6][1]}</TableRowColumn>
       </TableRow>
     </TableBody>
       </Table>
