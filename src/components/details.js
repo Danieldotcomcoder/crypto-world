@@ -33,7 +33,9 @@ var parse = require('html-react-parser');
      
      useEffect(() =>  { 
       Axios.request(options).then((response) =>
-       response.data).then((result) => setData(Object.entries(result.data.coin)))})
+       response.data).then((result) => setData(Object.entries(result.data.coin)))
+    
+      },[])
       if (!data) return null;
       data.splice(7,2)
       
