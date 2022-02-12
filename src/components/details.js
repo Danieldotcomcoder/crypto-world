@@ -38,6 +38,7 @@ var parse = require('html-react-parser');
       },[])// eslint-disable-line react-hooks/exhaustive-deps
       if (!data) return null;
       data.splice(7,2)
+      data.splice(17,1)
       
       console.log(data);
       
@@ -68,7 +69,7 @@ var parse = require('html-react-parser');
     <TableBody>
       <TableRow>
         <TableRowColumn>{data[13][1]}</TableRowColumn>
-        <TableRowColumn>{data[17][1]}</TableRowColumn>
+        <TableRowColumn>{data[16][1]}</TableRowColumn>
         <TableRowColumn>{data[1][1]}</TableRowColumn>
         <TableRowColumn>{data[8][1]} $</TableRowColumn>
         <TableRowColumn>{Number(data[9][1]).toFixed(9)} $</TableRowColumn>
