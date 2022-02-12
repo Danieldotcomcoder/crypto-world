@@ -164,7 +164,7 @@ ul li {
 
 .table-div {
   position: relative;
-  bottom: 15px;
+  bottom: 35px;
 }
 
 .sparkline-details {
@@ -226,4 +226,9 @@ h3 {
 
 .about-h {
   margin-top: 10%;
+}
+
+.details-main {
+  overflow-y: hidden;
+  overflow-x: hidden;
 }

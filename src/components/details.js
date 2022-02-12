@@ -44,7 +44,7 @@ var parse = require('html-react-parser');
       
     return (
       
-      <div>
+      <div className='details-main'>
         <Link className='back' to='/'>
           Back
         </Link>
