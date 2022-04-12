@@ -15,8 +15,6 @@ This is a React project based on the coinranking Api, which will display a list 
 - Github
 - Gitflow
 - Visual Studio Code
-
-
 ## Live Demo
 
 [Link](https://cryptoprojectdanny.herokuapp.com/)
@@ -41,8 +39,6 @@ This is a React project based on the coinranking Api, which will display a list 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
