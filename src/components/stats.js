@@ -9,7 +9,7 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 
-export const Stats = () => {
+const Stats = () => {
   const [stats, setStats] = useState(null);
 
   const statistics = {
@@ -23,11 +23,11 @@ export const Stats = () => {
   };
 
   useEffect(() => {
-    Axios.request(statistics).then((response) => response.data).then((result) => setStats(Object.entries(result.data)));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    Axios.request(statistics)
+      .then((response) => response.data).then((result) => setStats(Object.entries(result.data)));
+  }, []);
 
   if (!stats) return null;
-  console.log(stats);
 
   return (
     <div>
@@ -56,3 +56,5 @@ export const Stats = () => {
     </div>
   );
 };
+
+export default Stats;

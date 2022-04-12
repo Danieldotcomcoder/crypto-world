@@ -6,7 +6,9 @@ const reducer = combineReducers({
   stocks: Stocksreducer,
 });
 
-export const store = createStore(
+const store = createStore(
   reducer,
   applyMiddleware(thunk),
 );
+
+export default store;

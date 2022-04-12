@@ -5,13 +5,12 @@ import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { fetchStocks } from '../Redux/stocks/stockreducer';
 import '../App.css';
 
-export const Home = () => {
+const Home = () => {
   const dispatch = useDispatch();
 
   const data = useSelector((state) => state.stocks);
-  useEffect(() => dispatch(fetchStocks), []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => dispatch(fetchStocks), []);
 
-  console.log(data);
   return (
 
     <div className="main-div">
@@ -49,3 +48,5 @@ export const Home = () => {
 
   );
 };
+
+export default Home;

@@ -2,10 +2,10 @@ import './App.css';
 import {
   BrowserRouter as Router, Route, Routes, NavLink,
 } from 'react-router-dom';
-import { Home } from './components/home';
-import { About } from './components/about';
-import { Details } from './components/details';
-import { Stats } from './components/stats';
+import Home from './components/home';
+import About from './components/about';
+import Details from './components/details';
+import Stats from './components/stats';
 import mainLogo from './images/cw.png';
 
 function App() {

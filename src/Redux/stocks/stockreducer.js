@@ -27,7 +27,8 @@ export const fetchStocks = (dispatch) => {
       'x-rapidapi-key': '03518c50f0mshb2f93a5c3fbb56fp1a5e6ajsn175d3c928506',
     },
   };
-  const result = Axios.request(options).then((response) => response.data).then((result) => dispatch(loadAllStocks(result.data.coins)));
+  const result = Axios.request(options).then((response) => response.data)
+    .then((result) => dispatch(loadAllStocks(result.data.coins)));
 
   return result;
 };

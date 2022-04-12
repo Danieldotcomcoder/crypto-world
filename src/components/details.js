@@ -15,7 +15,7 @@ import {
 
 const parse = require('html-react-parser');
 
-export const Details = () => {
+const Details = () => {
   const [data, setData] = useState(null);
 
   const location = useLocation();
@@ -34,13 +34,13 @@ export const Details = () => {
   };
 
   useEffect(() => {
-    Axios.request(options).then((response) => response.data).then((result) => setData(Object.entries(result.data.coin)));
-  }, []);// eslint-disable-line react-hooks/exhaustive-deps
+    Axios.request(options)
+      .then((response) => response.data)
+      .then((result) => setData(Object.entries(result.data.coin)));
+  }, []);
   if (!data) return null;
   data.splice(7, 2);
   data.splice(17, 1);
-
-  console.log(data);
 
   return (
 
@@ -108,3 +108,5 @@ export const Details = () => {
     </div>
   );
 };
+
+export default Details;
