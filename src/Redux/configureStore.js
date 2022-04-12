@@ -1,13 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import Stocksreducer from './stocks/stockreducer';
 import thunk from 'redux-thunk';
+import Stocksreducer from './stocks/stockreducer';
 
 const reducer = combineReducers({
-stocks : Stocksreducer
-})
+  stocks: Stocksreducer,
+});
 
 export const store = createStore(
-    reducer,
-    applyMiddleware(thunk),
-  );
-  
+  reducer,
+  applyMiddleware(thunk),
+);
