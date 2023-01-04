@@ -17,7 +17,7 @@ This is a React project based on the coinranking Api, which will display a list 
 - Visual Studio Code
 ## Live Demo
 
-[Link](https://cryptoprojectdanny.herokuapp.com/)
+[Link](https://majestic-tiramisu-6e7290.netlify.app/)
 
 ## Getting Started
 
