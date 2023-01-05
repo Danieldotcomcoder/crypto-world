@@ -36,7 +36,6 @@ const Details = () => {
       .then((result) => setData(Object.entries(result.data.coin)));
   }, []);
   if (!data) return null;
-  console.log(data);
   data.splice(7, 2);
   data.splice(17, 1);
 
