@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
 import {
-  Sparklines, SparklinesBars, SparklinesLine, SparklinesReferenceLine,
-} from 'react-sparklines';
-import {
   Table,
   TableBody,
   TableHeader,
@@ -97,13 +94,6 @@ const Details = () => {
             </TableRow>
           </TableBody>
         </Table>
-        <div className="sparkline-details">
-          <Sparklines className="spk" style={{ fill: 'none' }} data={data[14][1]} limit={30} width={1000} height={120}>
-            <SparklinesLine color="black" />
-            <SparklinesBars color="lightgrey" />
-            <SparklinesReferenceLine type="max" />
-          </Sparklines>
-        </div>
       </div>
     </div>
   );
