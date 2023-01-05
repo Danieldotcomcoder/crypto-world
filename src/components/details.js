@@ -36,6 +36,7 @@ const Details = () => {
       .then((result) => setData(Object.entries(result.data.coin)));
   }, []);
   if (!data) return null;
+  console.log(data);
   data.splice(7, 2);
   data.splice(17, 1);
 
@@ -66,13 +67,12 @@ const Details = () => {
               <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Symbol</TableHeaderColumn>
               <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Market Cap</TableHeaderColumn>
               <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Price</TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Price Change</TableHeaderColumn>
               <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>24h Volume</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableRowColumn>{data[13][1]}</TableRowColumn>
+              <TableRowColumn>{data[14][1]}</TableRowColumn>
               <TableRowColumn>{data[16][1]}</TableRowColumn>
               <TableRowColumn>{data[1][1]}</TableRowColumn>
               <TableRowColumn>
@@ -81,14 +81,9 @@ const Details = () => {
                 $
               </TableRowColumn>
               <TableRowColumn>
-                {Number(data[9][1]).toFixed(9)}
+                {Number(data[10][1]).toFixed(9)}
                 {' '}
                 $
-              </TableRowColumn>
-              <TableRowColumn>
-                {data[12][1]}
-                {' '}
-                %
               </TableRowColumn>
               <TableRowColumn>{data[7][1]}</TableRowColumn>
             </TableRow>
