@@ -1,5 +1,8 @@
+/* eslint-disable no-sequences */
+/* eslint-disable no-lone-blocks */
+/* eslint-disable no-unused-vars */
+/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from 'react';
-import Axios from 'axios';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Table,
@@ -13,47 +16,52 @@ import {
 const parse = require('html-react-parser');
 
 const Details = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState();
 
   const location = useLocation();
   const { coin } = location.state;
-  const options = {
-    method: 'GET',
-    url: `https://coinranking1.p.rapidapi.com/coin/${coin}`,
-    params: {
-      referenceCurrencyUuid: 'yhjMzLPhuIDl',
-      timePeriod: '24h',
-    },
-    headers: {
-      'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-      'x-rapidapi-key': '03518c50f0mshb2f93a5c3fbb56fp1a5e6ajsn175d3c928506',
-    },
-  };
 
+  const fetchcoindata = async () => {
+    const options = {
+      method: 'GET',
+
+      params: {
+        referenceCurrencyUuid: 'yhjMzLPhuIDl',
+        timePeriod: '24h',
+      },
+      headers: {
+        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
+        'x-rapidapi-key': '03518c50f0mshb2f93a5c3fbb56fp1a5e6ajsn175d3c928506',
+      },
+    };
+    await fetch(`https://coinranking1.p.rapidapi.com/coin/${coin}`, options)
+      .then((res) => res.json())
+      .then((info) => setData(info.data.coin));
+  };
   useEffect(() => {
-    Axios.request(options)
-      .then((response) => response.data)
-      .then((result) => setData(Object.entries(result.data.coin)));
+    fetchcoindata();
+    // .then((result) => setData(result.data.coin));
   }, []);
   if (!data) return null;
-  data.splice(7, 2);
-  data.splice(17, 1);
+
+
+  console.log(data);
+ 
 
   return (
-
     <div>
       <Link className="back" to="/">
         Back
       </Link>
       <ul>
-        <li className="Coin-d-name" style={{ color: data[4][1] }}>
+        <li className="Coin-d-name" style={{ color: data.color }}>
           {' '}
-          {data[2][1]}
+          {data.name}
           {' '}
         </li>
         <li className="Desc-div">
           {' '}
-          { parse(data[3][1])}
+          {parse(data.description)}
           {' '}
         </li>
       </ul>
@@ -61,30 +69,42 @@ const Details = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Rank</TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Tier</TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Symbol</TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Market Cap</TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>Price</TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>24h Volume</TableHeaderColumn>
+              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
+                Rank
+              </TableHeaderColumn>
+              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
+                Tier
+              </TableHeaderColumn>
+              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
+                Symbol
+              </TableHeaderColumn>
+              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
+                Market Cap
+              </TableHeaderColumn>
+              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
+                Price
+              </TableHeaderColumn>
+              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
+                24h Volume
+              </TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableRowColumn>{data[14][1]}</TableRowColumn>
-              <TableRowColumn>{data[16][1]}</TableRowColumn>
-              <TableRowColumn>{data[1][1]}</TableRowColumn>
+              <TableRowColumn>{data.rank}</TableRowColumn> 
+              <TableRowColumn>{data.tier}</TableRowColumn>
+              <TableRowColumn>{data.symbol}</TableRowColumn>
               <TableRowColumn>
-                {data[8][1]}
+                 {data.marketCap} 
                 {' '}
                 $
               </TableRowColumn>
               <TableRowColumn>
-                {Number(data[10][1]).toFixed(9)}
+                {Number(data.price).toFixed(6)}
                 {' '}
                 $
               </TableRowColumn>
-              <TableRowColumn>{data[7][1]}</TableRowColumn>
+              <TableRowColumn>{Number(data["24hVolume"])}</TableRowColumn>
             </TableRow>
           </TableBody>
         </Table>
