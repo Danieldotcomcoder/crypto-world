@@ -9,8 +9,9 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const data = useSelector((state) => state.stocks);
+  console.log(data);
   useEffect(() => dispatch(fetchStocks), []);
-
+    
   return (
 
     <div className="main-div">

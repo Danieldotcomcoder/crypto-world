@@ -1,7 +1,3 @@
-/* eslint-disable no-sequences */
-/* eslint-disable no-lone-blocks */
-/* eslint-disable no-unused-vars */
-/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -40,13 +36,10 @@ const Details = () => {
   };
   useEffect(() => {
     fetchcoindata();
-    // .then((result) => setData(result.data.coin));
   }, []);
+  
   if (!data) return null;
-
-
   console.log(data);
- 
 
   return (
     <div>
