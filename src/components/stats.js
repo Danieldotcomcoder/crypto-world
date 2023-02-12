@@ -26,7 +26,6 @@ const Stats = () => {
     Axios.request(statistics)
       .then((response) => response.data).then((result) => setStats(result.data));
   }, []);
-   console.log(stats);
   if (!stats) return null;
 
   return (

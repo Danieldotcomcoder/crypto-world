@@ -38,7 +38,6 @@ const Details = () => {
   useEffect(() => {
     fetchcoindata();
   }, []);
-  console.log(data);
   if (!data) return null;
 
   return (
