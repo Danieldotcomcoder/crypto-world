@@ -24,9 +24,9 @@ const Stats = () => {
 
   useEffect(() => {
     Axios.request(statistics)
-      .then((response) => response.data).then((result) => setStats(Object.entries(result.data)));
+      .then((response) => response.data).then((result) => setStats(result.data));
   }, []);
-
+   console.log(stats);
   if (!stats) return null;
 
   return (
@@ -44,11 +44,11 @@ const Stats = () => {
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableRowColumn>{stats[0][1]}</TableRowColumn>
-              <TableRowColumn>{stats[1][1]}</TableRowColumn>
-              <TableRowColumn>{stats[2][1]}</TableRowColumn>
-              <TableRowColumn>{stats[3][1]}</TableRowColumn>
-              <TableRowColumn>{stats[4][1]}</TableRowColumn>
+              <TableRowColumn>{stats.totalCoins}</TableRowColumn>
+              <TableRowColumn>{stats.totalMarkets}</TableRowColumn>
+              <TableRowColumn>{stats.totalExchanges}</TableRowColumn>
+              <TableRowColumn>{stats.totalMarketCap}</TableRowColumn>
+              <TableRowColumn>{stats.total24hVolume}</TableRowColumn>
             </TableRow>
           </TableBody>
         </Table>
