@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Sparklines, SparklinesLine, SparklinesBars, SparklinesReferenceLine, SparklinesSpots } from 'react-sparklines';
 import {
   Table,
   TableBody,
@@ -37,9 +38,8 @@ const Details = () => {
   useEffect(() => {
     fetchcoindata();
   }, []);
-  
-  if (!data) return null;
   console.log(data);
+  if (!data) return null;
 
   return (
     <div>
@@ -101,6 +101,14 @@ const Details = () => {
             </TableRow>
           </TableBody>
         </Table>
+        <div className="sparkline-details">
+          <Sparklines className="spk" style={{ fill: 'none' }} data={data.sparkline} limit={30} width={1000} height={120}>
+            <SparklinesLine color="black" />
+            <SparklinesBars color="lightgrey" />
+            <SparklinesReferenceLine type="max" />
+            <SparklinesSpots />
+          </Sparklines>
+        </div>
       </div>
     </div>
   );
