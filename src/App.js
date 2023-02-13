@@ -2,6 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router, Route, Routes, NavLink,
 } from 'react-router-dom';
+import React from 'react';
 import Home from './components/home';
 import About from './components/about';
 import Details from './components/details';

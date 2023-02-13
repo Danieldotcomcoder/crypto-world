@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sparklines, SparklinesLine, SparklinesBars, SparklinesReferenceLine, SparklinesSpots } from 'react-sparklines';
-import {
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderColumn,
-  TableRow,
-  TableRowColumn,
-} from 'material-ui/Table';
+import Table from 'material-ui/core/Table';
+import TableBody from 'material-ui/core/TableBody';
+import TableHeader from 'material-ui/core/TableHeader';
+import TableHeaderColumn from 'material-ui/core/TableHeaderColumn'
+import TableRow from 'material-ui/core/TableRow'
+import TableRowColumn from 'material-ui/core/TableRowColumn'
 
+  
 const parse = require('html-react-parser');
 
 const Details = () => {
