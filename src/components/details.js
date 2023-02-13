@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sparklines, SparklinesLine, SparklinesBars, SparklinesReferenceLine, SparklinesSpots } from 'react-sparklines';
-import Table from 'material-ui/core/Table';
-import TableBody from 'material-ui/core/TableBody';
-import TableHeader from 'material-ui/core/TableHeader';
-import TableHeaderColumn from 'material-ui/core/TableHeaderColumn'
-import TableRow from 'material-ui/core/TableRow'
-import TableRowColumn from 'material-ui/core/TableRowColumn'
-
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+// import TableHeader from '@material-ui/core/TableHeader';
+// import TableHeaderColumn from '@material-ui/core/TableHeaderColumn'
+import TableRow from '@material-ui/core/TableRow'
+// import TableRowColumn from '@material-ui/core/TableRowColumn'
+import parse from 'html-react-parser'
   
-const parse = require('html-react-parser');
+
 
 const Details = () => {
   const [data, setData] = useState();
@@ -58,9 +58,9 @@ const Details = () => {
       </ul>
       <div className="table-div">
         <Table>
-          <TableHeader>
+          {/* <TableHeader> */}
             <TableRow>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
+              {/* <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
                 Rank
               </TableHeaderColumn>
               <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
@@ -77,12 +77,12 @@ const Details = () => {
               </TableHeaderColumn>
               <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
                 24h Volume
-              </TableHeaderColumn>
+              </TableHeaderColumn> */}
             </TableRow>
-          </TableHeader>
+          {/* </TableHeader> */}
           <TableBody>
             <TableRow>
-              <TableRowColumn>{data.rank}</TableRowColumn> 
+              {/* <TableRowColumn>{data.rank}</TableRowColumn> 
               <TableRowColumn>{data.tier}</TableRowColumn>
               <TableRowColumn>{data.symbol}</TableRowColumn>
               <TableRowColumn>
@@ -95,7 +95,7 @@ const Details = () => {
                 {' '}
                 $
               </TableRowColumn>
-              <TableRowColumn>{Number(data["24hVolume"])}</TableRowColumn>
+              <TableRowColumn>{Number(data["24hVolume"])}</TableRowColumn> */}
             </TableRow>
           </TableBody>
         </Table>
