@@ -99,48 +99,6 @@ const Details = () => {
         </TableBody>
       </Table>
     </TableContainer>
-        {/* <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
-                Rank
-              </TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
-                Tier
-              </TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
-                Symbol
-              </TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
-                Market Cap
-              </TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
-                Price
-              </TableHeaderColumn>
-              <TableHeaderColumn style={{ color: 'black', fontSize: '2vh' }}>
-                24h Volume
-              </TableHeaderColumn>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableRowColumn>{data.rank}</TableRowColumn> 
-              <TableRowColumn>{data.tier}</TableRowColumn>
-              <TableRowColumn>{data.symbol}</TableRowColumn>
-              <TableRowColumn>
-                 {data.marketCap} 
-                {' '}
-                $
-              </TableRowColumn>
-              <TableRowColumn>
-                {Number(data.price).toFixed(6)}
-                {' '}
-                $
-              </TableRowColumn>
-              <TableRowColumn>{Number(data["24hVolume"])}</TableRowColumn>
-            </TableRow>
-          </TableBody>
-        </Table> */}
         <div className="sparkline-details">
           <Sparklines className="spk" style={{ fill: 'none' }} data={data.sparkline} limit={30} width={1000} height={120}>
             <SparklinesLine color="black" />
